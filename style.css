@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root{
+	--primary-color: #4daf54
+}
+
+body{
+	height: 100vh;
+	background:linear-gradient(to right, #4daf54, #3d8880);
+	font-family: "Poppins";
+}
+
+.card{
+	position: relative;
+	width: 320px;
+	height: 400px;
+	margin: 120px auto;
+	background-color: #272d40;
+	border-radius: 15px;
+	color: white;
+	padding: 20px;
+}
+
+.heart, .cart{
+	position: absolute;
+	font-size: 30px;
+	left: 20px;
+	top: 15px;
+	cursor: pointer;
+}
+
+.cart{
+	left: unset;
+	right: 20px;
+}
+
+.image{
+	width: 90%;
+	transition: 0.5s;
+}
+
+.image img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.title, .price{
+	font-size: 25px;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	transition: 0.5s;
+}
+
+.title{
+	color: var(--primary-color);
+}
+
+.size, .color{
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.size span{
+	padding: 1px 10px;
+	background: whitesmoke;
+	border-radius: 5px;
+	color: black;
+	margin: 5px;
+}
+
+.color span{
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	margin: 5px;
+}
+.color-green{
+	background: green;
+}
+.color-red{
+	background: red;
+}
+.color-black{
+	background: yellow;
+}
+
+.action button{
+	background: var(--primary-color);
+	color: white;
+	padding: 10px 25px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	font-weight: bold;
+}
+
+.card:hover .image{
+	transform: translateY(-90px) rotate(-20deg);
+}
+.card:hover .title{
+	transform: translate(-36px,-70px);
+}
+.card:hover .price{
+	transform: translate(-114px,-70px);
+}
+
+.size{
+	margin-top: 150px;
+}
+.size,.color,.action{
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s;
+	transition-delay: 0.3s;
+}
+.card:hover .size,.card:hover .color,.card:hover .action{
+	visibility: visible;
+	opacity: 100;
+}
+.card:hover .size{
+	margin-top: -30px;
+}
+
